@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Author" contect="http://www.webqin.net">
+<title>导入课程表</title>
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/response.css" rel="stylesheet">
+<style type="text/css">
+
+ a{border-radius:5px 5px 5px 5px;}
+  a{ color:inherit !important; }
+
+li{width: 33% !important;}
+</style>
+</head>
+<body>
+<div class="maincont">
+		<header>
+			
+			<div class="head-mid">
+				<h1>导入课程表</h1>
+			</div>
+		</header>
+		<!--head-top/-->
+			<h3>
+				教务系统导入
+			</h3>
+			<div style="height: 30px"></div>
+			<div class="lrBox">
+				<div class="lrList">
+					<input type="text" placeholder="输入学号" id="user_id" />
+				</div>
+				
+				<div class="lrList">
+					<input type="text" placeholder="输入密码" id="password" />
+				</div>
+				<div class="lrList2">
+					<input type="text" placeholder="输入验证码" id="ranstring" />
+					<img  style="width: 100px; height: 50px;" alt="" id ="yzmimg" /> 
+				</div>
+			</div>
+			<!--lrBox/-->
+			<div class="lrSub">
+				<input type="submit" value="继续" id="submitconfirm"/>
+			</div>
+		<!--reg-login/-->
+		<div class="height1"></div>
+		<!--footNav/-->
+	</div>
+	
+		
+	<!--maincont-->
+	<script src="config/config.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/style.js"></script>
+
+	<script type="text/javascript">
+	$("#yzmimg").attr("src", serverPath+"wzxy/wx/getYanzhengma.html");
+	$("#yzmimg").click(function(){
+		var timestamp = new Date().getTime();
+		 $("#yzmimg").attr("src", serverPath+"wzxy/wx/getYanzhengma.html"+ '?' +timestamp );
+	});
+	$('#submitconfirm' ).click(function(){
+		var user_id = $("#user_id").val();
+		var password = $("#password").val();
+		var ranstring = $("#ranstring").val();
+		$.ajax({    
+		    url:serverPath+"wzxy/wx/loginJiaoda.html", // 跳转到 action    
+		    data:{
+		    	"user_id":user_id,
+		    	"password":password,
+		    	"ranstring":ranstring,
+		    },
+		    xhrFields: {
+		        withCredentials: true
+		     },
+		    type:"post",
+		    cache:false,           
+		    success:function(data) {  
+			   if(data == "登录成功"){
+				   window.location.href="viewClassSchedule.html?"+user_id;
+			   }else{
+				   alert(data);
+			   }
+		    },    
+		    error:function(XMLHttpRequest, textStatus, errorThrown) {    
+	                    alert("网络异常，请联系管理员");
+		    }    
+		});
+		//window.location.href="viewClassSchedule.html?user_id="+user_id+"&password="+password+"&ranstring="+ranstring;
+	});
+	</script>
+	
+
+</body>
+</html>

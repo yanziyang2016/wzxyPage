@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Author" contect="http://www.webqin.net">
+<title>课程表</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/response.css" rel="stylesheet">
+<style type="text/css">
+
+ a{border-radius:5px 5px 5px 5px;}
+  a{ color:inherit !important; }
+
+li{width: 33% !important;}
+</style>
+</head>
+<body>
+	<div class="maincont">
+		<div class="height2"></div>
+		<div style="width: 96%;margin-left: 2%;font-size: 16px;line-height: 30px">亲爱的同学，课程信息以教务系统为准，若教务系统有更新，请再去导一次，以免错过课程。</div>
+		<h3 class="proTitle" style="font-size: 16px">以下学校我们开发了课程表功能</h3>
+		<ul class="guige">
+			<li class="guigeCur"><a id="10" style="font-size: 16px">西南交大</a></li>
+			
+			<div class="clearfix"></div>
+		</ul>
+		<!--guige/-->
+		<div class="height2"></div>
+		
+		<div class="lrSub">
+			<input type="submit" id="submitconfirm" value="导入课程" />
+		</div>
+		<!--zhaieq/-->
+		<!--proinfoList/-->
+	</div>
+	
+		
+	<!--maincont-->
+	<script src="config/config.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/style.js"></script>
+
+
+	<script>
+	$('.guige a' ).click(function(){
+		var identity = $(this).attr("id");
+	});
+	$('#submitconfirm' ).click(function(){
+		window.location.href="importClassSchedule.html";
+	});
+	
+	</script>
+</body>
+</html>

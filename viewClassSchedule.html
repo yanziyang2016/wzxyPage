@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Author" contect="http://www.webqin.net">
+<title>课程表</title>
+<link rel="shortcut icon" href="images/favicon.ico" />
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/response.css" rel="stylesheet">
+
+<style type="text/css">
+
+body{width:100%;height:100%}
+table{width:100%;height:100%}
+
+.yuwen, .shuxue, .yingyu, .wuli, .huaxue, .shengwu, .lishi, .zhengzhi,
+	.meishu, .tiyu, .dili, .yinyue, .dele {
+	background: #adbeff;
+	color: #FFF;
+	padding: 3px 0;
+	box-sizing: border-box;
+	margin: 0 auto;
+	border-radius: 0.5em;
+	line-height: 2em;
+	background-url: none;
+}
+
+.shuxue {
+	background: #ff9e9f;
+}
+
+.lishi {
+	background: #ff9e9e;
+}
+
+.yingyu {
+	background: #ffdf62;
+}
+
+.zhengzhi {
+	background: #61e7f0;
+}
+
+.wuli {
+	background: #e4e275;
+}
+
+.meishu {
+	background: #fdc081;
+}
+
+.huaxue {
+	background: #c2b4f6;
+}
+
+.dili {
+	background: #62e48a;
+}
+
+.shengwu {
+	background: #ffc262;
+}
+
+.tiyu {
+	background: #c2ec5c;
+}
+
+.dele {
+	background: #FFF;
+	color: #666666;
+}
+
+.yinyue {
+	background: #c2ec5c;
+}
+
+
+div{
+width: 100%;
+word-break:break-all
+}
+.course_no div {
+	height: 10em;
+	line-height: 10em;
+	border-bottom: 2px solid 	#F5DEB3;
+}
+.oneline{
+	height: 10em;
+}
+.twoline{
+	height: 20em;
+}
+.threeline{
+	height: 30em;
+}
+
+</style>
+</head>
+<body>
+	<div class="maincont">
+		<header>
+			<div class="head-mid">
+				<h1>课程表</h1>
+			</div>
+		</header>
+		<div style="width: 100%">
+		<table class="course_table" style="table-layout: fixed" >
+		<tbody id="course_html" >
+			<tr>
+				<th style="width: 5%"></th>
+				<th style="width: 14%">周一</th>
+				<th style="width: 14%">周二</th>
+				<th style="width: 14%">周三</th>
+				<th style="width: 14%">周四</th>
+				<th style="width: 14%">周五</th>
+				<th style="width: 13%">周六</th>
+				<th style="width: 12%">周日</th>
+			</tr>
+			<tr >
+				<td class="course_no" style="width: 5%"><div >1</div><div >2</div><div >3</div><div >4</div><div >5</div><div >6</div><div >7</div><div >8</div><div >9</div><div >10</div></td>
+				<td style="width: 14%" id="1_1" >
+					<div class="shuxue twoline">虚拟仪器设计 Design of Virtual Instrument System<br>(X1318(犀浦校区))</div>
+					<div class="yuwen threeline">控制工程基础 Basics of Control Engineering<br>(X1313(犀浦校区))</div>
+					<div class="twoline"></div>
+					<div class="yingyu threeline">电子测量技术 Electronic Measurement Technology<br>(X2328(犀浦校区))</div>
+				</td>
+				<td style="width: 14%" id="2_1" >
+					<div   style="height:35em "></div>
+					<div class="yingyu" style="height:15em ">微机原理与接口技术 Microcomputer Principle and Interface Technology<br>(X2226(犀浦校区))</div>
+				</td>
+				<td style="width: 14%" id="3_1" >
+					<div class="shuxue" style="height:10em ">虚拟仪器设计 Design of Virtual Instrument System<br>(X1318(犀浦校区))</div>
+					<div class="yuwen"  style="height:15em ">控制工程基础 Basics of Control Engineering<br>(X1313(犀浦校区))</div>
+					<div   style="height:10em "></div>
+					<div class="yingyu" style="height:15em ">电子测量技术 Electronic Measurement Technology<br>(X2328(犀浦校区))</div>
+				
+				</td>
+				<td style="width: 14%" id="4_1" >
+					<div class="shuxue" style="height:10em ">虚拟仪器设计 Design of Virtual Instrument System<br>(X1318(犀浦校区))</div>
+					<div class="yuwen"  style="height:15em ">控制工程基础 Basics of Control Engineering<br>(X1313(犀浦校区))</div>
+					<div   style="height:10em "></div>
+					<div class="yingyu" style="height:15em ">电子测量技术 Electronic Measurement Technology<br>(X2328(犀浦校区))</div>
+				
+				</td>
+				<td id="5_1" >
+					<div class="shuxue" style="height:10em ">虚拟仪器设计 Design of Virtual Instrument System<br>(X1318(犀浦校区))</div>
+					<div class="yuwen"  style="height:15em ">控制工程基础 Basics of Control Engineering<br>(X1313(犀浦校区))</div>
+					<div   style="height:10em "></div>
+					<div class="yingyu" style="height:15em ">电子测量技术 Electronic Measurement Technology<br>(X2328(犀浦校区))</div>
+				</td>
+				<td id="6_1" >
+					<div class="shuxue" style="height:10em ">虚拟仪器设计 Design of Virtual Instrument System<br>(X1318(犀浦校区))</div>
+					<div class="yuwen"  style="height:15em ">控制工程基础 Basics of Control Engineering<br>(X1313(犀浦校区))</div>
+					<div   style="height:10em "></div>
+					<div class="yingyu" style="height:15em ">电子测量技术 Electronic Measurement Technology<br>(X2328(犀浦校区))</div>
+				</td>
+				<td id="7_1" >
+					<div class="shuxue" style="height:10em ">虚拟仪器设计 Design of Virtual Instrument System<br>(X1318(犀浦校区))</div>
+					<div class="yuwen"  style="height:15em ">控制工程基础 Basics of Control Engineering<br>(X1313(犀浦校区))</div>
+					<div   style="height:10em "></div>
+					<div class="yingyu" style="height:15em ">电子测量技术 Electronic Measurement Technology<br>(X2328(犀浦校区))</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</div>
+	<!--maincont-->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="config/config.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/style.js"></script>
+	<script type="text/javascript">
+	var src = window.location.href;
+	$.ajax({    
+	    url:serverPath+"wzxy/wx/classScheduleJiaoda.html", // 跳转到 action    
+	    data:{
+	    	"user_id":src.split("?")[1]
+	    },
+	    xhrFields: {
+	        withCredentials: true
+	     },
+	    type:"post",
+	    cache:false,           
+	    success:function(data) {  
+		 
+	    },    
+	    error:function(XMLHttpRequest, textStatus, errorThrown) {    
+                    alert("网络异常，请联系管理员");
+	    }    
+	});
+	$('#submitconfirm' ).click(function(){
+		var user_id = $("#user_id").val();
+		var password = $("#password").val();
+		var ranstring = $("#ranstring").val();
+		
+		//window.location.href="viewClassSchedule.html?user_id="+user_id+"&password="+password+"&ranstring="+ranstring;
+	});
+	</script>
+</body>
+</html>
